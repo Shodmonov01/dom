@@ -1,0 +1,116 @@
+.famous-category {
+	padding-bottom: 150px;
+}
+
+.famous-title {
+	margin-bottom: 53px;
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 800;
+	font-size: 36px;
+	line-height: 150%;
+	color: #333333;
+}
+
+.card-catalog-title {
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 800;
+	font-size: 18px;
+	line-height: 150%;
+	color: #333333;
+	margin-bottom: 20px;
+}
+
+.card-catalog-text {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 150%;
+	color: #727488;
+	margin: 0;
+	margin-bottom: 10px;
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+
+.card-catalog-text img {
+	min-width: 23px;
+}
+
+.catalog-card {
+	width: 100% !important;
+	max-width: 405px !important;
+	background: #ffffff !important;
+	box-shadow: 0px 4px 80px rgba(5, 9, 22, 0.08) !important;
+	border-radius: 20px !important;
+	overflow: hidden;
+	border: 2px solid #eeeeee;
+}
+
+.card-catalog-price {
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 800;
+	font-size: 20px;
+	line-height: 150%;
+	color: #333333;
+}
+
+.card-catalog-link {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 150%;
+	color: #f4683f;
+	text-decoration: none;
+}
+
+.card-catalog-link:hover {
+	color: #f4683f;
+}
+
+.card-body {
+	padding: 30px !important;
+}
+
+.favorite {
+	cursor: pointer;
+	padding: 12px 11px 10px 11px;
+	top: 20px;
+	left: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgba(255, 255, 255, 0.5);
+	box-shadow: 0px 4px 20px rgba(21, 22, 34, 0.2);
+	border-radius: 200px;
+	position: absolute;
+}
+
+.number-of-poeple {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
+	padding: 7px 15px 8px 16px;
+	background: #ffffff;
+	border-radius: 150px;
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 150%;
+	color: #727488;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+}
+
+// .col-12 {
+// 	display: flex;
+// 	justify-content: center;
+// }

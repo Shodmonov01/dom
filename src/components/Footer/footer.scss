@@ -1,0 +1,85 @@
+.footer-page {
+	background: linear-gradient(180deg, #161723 0%, #161723 109.24%);
+	padding: 82px 0 72px 0;
+}
+
+.logo-wrap {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.logo-text {
+	margin-top: 130px;
+}
+
+.logo-text p {
+	margin: 0;
+	margin-bottom: 7px;
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 17px;
+	color: #c0c2d7;
+}
+
+.footer-catalog {
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 800;
+	font-size: 22px;
+	line-height: 150%;
+	color: #ffffff;
+}
+
+.footer-catalog-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.footer-catalog-item+.footer-catalog-item {
+	margin-top: 7px;
+}
+
+.footer-catalog-item a {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 17px;
+	color: #c0c2d7;
+	text-decoration: none;
+}
+
+.footer-desc {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 17px;
+	display: block;
+	color: #c0c2d7;
+	text-decoration: none;
+	margin-bottom: 7px;
+}
+
+.footer-desc:hover {
+	color: #c0c2d7;
+}
+
+.footer-phone {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 17px;
+	color: #c0c2d7;
+}
+
+.off-hero-icons {
+	display: flex;
+	gap: 15px;
+	margin-top: 160px;
+}

@@ -1,0 +1,60 @@
+.service-page {
+	padding-bottom: 150px;
+}
+
+.service-title {
+    margin-bottom: 53px;
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 800;
+	font-size: 40px;
+	line-height: 150%;
+	color: #333333;
+}
+
+.service-desc {
+	margin: 0;
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 150%;
+	color: #333333;
+    display: flex;
+    align-items: center;
+}
+
+.service-img {
+    position: absolute;
+    left: 50px;
+}
+
+.service-item {
+	padding: 51px 110px;
+	position: relative;
+	background: #ffffff;
+	box-shadow: 0px 4px 80px rgba(5, 9, 22, 0.08);
+	border-radius: 20px;
+}
+
+.service-btn {
+	width: 100%;
+	padding: 11px 50px;
+	max-width: 280px;
+	background: #f4683f;
+	border-radius: 200px;
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 150%;
+	text-decoration: none;
+	display: block;
+	margin: 0 auto;
+	margin-top: 80px;
+	color: #ffffff;
+}
+
+.service-btn:hover {
+	color: #fff;
+}
