@@ -1,0 +1,49 @@
+.application-page {
+	background: url('https://domiktut.ru/wp-content/themes/domiktut/images/background_rent.png')
+		no-repeat center / cover;
+	padding: 240px 0 300px 273px;
+}
+
+.application-wrap {
+	width: 100%;
+	max-width: 360px;
+}
+
+.application-title {
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 800;
+	font-size: 36px;
+	line-height: 150%;
+	color: #ffffff;
+}
+
+.application-desc {
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 160%;
+	margin: 0;
+	margin-top: 20px;
+	color: #ffffff;
+}
+
+.application-link {
+	padding: 11px 50px;
+	background: #f4683f;
+	margin-top: 50px;
+    display: inline-block;
+	border-radius: 200px;
+	text-decoration: none;
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 150%;
+	color: #ffffff;
+}
+
+.application-link:hover {
+    color: #ffffff;
+}
