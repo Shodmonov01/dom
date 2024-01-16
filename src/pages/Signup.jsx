@@ -96,11 +96,18 @@ export const Signup = () => {
                 <br></br>
                 <div className='btn-box'>
                     {/* Ссылка для перехода на страницу входа и кнопка для отправки формы */}
+<<<<<<< HEAD
                     <button style={{marginBottom:'20px'}} type="submit" className='btn btn-success btn-md'>РЕГИСТРАЦИЯ</button>
                     <br />
                     <span>Уже есть аккаунт? Войти
                         <Link to="/login" className='link'> здесь</Link>
                     </span>
+=======
+                    <span>Уже есть аккаунт? Войти
+                        <Link to="/login" className='link'> здесь</Link>
+                    </span>
+                    <button type="submit" className='btn btn-success btn-md'>РЕГИСТРАЦИЯ</button>
+>>>>>>> 0169c0238ed0c99adc5b154071c970a19402cc42
                 </div>
             </form>
             {errorMsg && <>

@@ -42,7 +42,11 @@ export const Login = () => {
         <div className='container' style={{padding:'100px'}}>
             <br></br>
             <br></br>
+<<<<<<< HEAD
             <h1>Войти</h1>
+=======
+            <h1>Login</h1>
+>>>>>>> 0169c0238ed0c99adc5b154071c970a19402cc42
             <hr></hr>
             {successMsg&&<>
                 <div className='success-msg'>{successMsg}</div>
@@ -54,15 +58,25 @@ export const Login = () => {
                 <input type="email" className='form-control' required
                 onChange={(e)=>setEmail(e.target.value)} value={email}></input>
                 <br></br>
+<<<<<<< HEAD
                 <label>Пароль</label>
+=======
+                <label>Password</label>
+>>>>>>> 0169c0238ed0c99adc5b154071c970a19402cc42
                 <input type="password" className='form-control' required
                 onChange={(e)=>setPassword(e.target.value)} value={password}></input>
                 <br></br>
                 <div className='btn-box'>
+<<<<<<< HEAD
                     <button style={{marginBottom:'20px'}} type="submit" className='btn btn-success btn-md'>LOGIN</button>
                     <br />
                     <span >У вас нет аккаунта? Регистрируйтесь 
                     <Link to="/signup" className='link'> тут</Link></span>
+=======
+                    <span>Don't have an account SignUp
+                    <Link to="/signup" className='link'> Here</Link></span>
+                    <button type="submit" className='btn btn-success btn-md'>LOGIN</button>
+>>>>>>> 0169c0238ed0c99adc5b154071c970a19402cc42
                 </div>
             </form>
             {errorMsg&&<>

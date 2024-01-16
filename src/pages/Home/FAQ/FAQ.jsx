@@ -14,6 +14,7 @@ export const FAQ = () => {
         <div class="">
           <div className="accordion">
             <Collapse defaultActiveKey={["1"]}>
+<<<<<<< HEAD
               <Panel header="Как происходит бронирование?" key="1">
                 <p>
                   Бронирование происходит после внесения предоплаты 50% от суммы
@@ -60,6 +61,31 @@ export const FAQ = () => {
                   после вашего отдыха. Мы не накручиваем больше от цены и
                   отдельно нам Вы ничего не платите.
                 </p>
+=======
+              <Panel
+                header="Как происходит бронирование?"
+                key="1"
+              >
+                <p> Why is the moon sometimes out during the day?</p>
+              </Panel>
+              <Panel header="Какая сумма предоплаты нужна?" key="2">
+                <p>scnsbcsbjnc,sbnkjcbhk</p>
+              </Panel>
+              <Panel header="Можно ли разбить предоплату на несколько частей?" key="3">
+                <p>scnsbcsbjnc,sbnkjcbhk</p>
+              </Panel>
+              <Panel header="Как работаете с юр.лицами?" key="4">
+                <p>scnsbcsbjnc,sbnkjcbhk</p>
+              </Panel>
+              <Panel header="Можно ли приехать на просмотр?" key="5">
+                <p>scnsbcsbjnc,sbnkjcbhk</p>
+              </Panel>
+              <Panel header="Зачем нужен залог?" key="6">
+                <p>scnsbcsbjnc,sbnkjcbhk</p>
+              </Panel>
+              <Panel header="Сколько стоят в Ваши услуги?" key="6">
+                <p>scnsbcsbjnc,sbnkjcbhk</p>
+>>>>>>> 0169c0238ed0c99adc5b154071c970a19402cc42
               </Panel>
             </Collapse>
           </div>
