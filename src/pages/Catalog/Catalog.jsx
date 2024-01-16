@@ -1,5 +1,5 @@
 import React from "react";
-import { Amir } from "./About/About";
+import {Amir}  from "./About/About";
 import Filtr from "./Filtr/Filtr";
 import ScrollCatalog from "./ScrollCatalog/ScrollCatalog";
 

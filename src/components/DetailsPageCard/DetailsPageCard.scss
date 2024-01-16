@@ -1,0 +1,35 @@
+.details-card {
+  // display: flex;
+  width: 100%;
+  .position-relative {
+    .card-img-top{
+      width: 750px;
+      border-radius: 50px -50px 0 50px;
+    }
+    .number-of-poeple-det {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      padding: 7px 15px 8px 16px;
+      background: #ffffff;
+      border-radius: 150px;
+      font-family: "Montserrat";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 150%;
+      color: #727488;
+      position: absolute;
+      right: -460px;
+      top: 20px;
+  }
+  }
+  .details-body {
+    .det-card-catalog {
+      display: flex;
+      width: 750px;
+      gap: 80px;
+    }
+  }
+}
