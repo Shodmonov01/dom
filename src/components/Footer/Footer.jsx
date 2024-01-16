@@ -8,7 +8,10 @@ import whatsapp from "../../assets/img/whatsapp.svg";
 import telegram from "../../assets/img/telegram.svg";
 import burger from "../../assets/img/icon_burger.svg";
 
+
+
 export const Footer = () => {
+  
   return (
     <div className="footer-page">
       <div className="containers">
@@ -57,16 +60,15 @@ export const Footer = () => {
                 className="text-decoration-none d-flex align-items-center"
               >
                 <i class="fa-sharp fa-solid fa-phone me-2 text-white"></i>{" "}
-                <span className="footer-phone">+998919104910</span>
+                <span className="footer-phone">+998978516060</span>
               </a>
               <div className="off-hero-icons">
                 <a href="#" target="_blank">
                   <img src={youtube} alt="" />
                 </a>
                 <a
-                  href="http://instagram.com/khusanov_o2"
+                  href="#"
                   target="_blank"
-                  rel="noopener noreferrer"
                 >
                   <img src={instagram} alt="" />
                 </a>
@@ -77,9 +79,9 @@ export const Footer = () => {
                   <img src={whatsapp} alt="" />
                 </a>
                 <a
-                  href="http://t.me/khusanov_o2"
+                  href="#"
                   target="_blank"
-                  rel="noopener noreferrer"
+                  
                 >
                   <img src={telegram} alt="" />
                 </a>

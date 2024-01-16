@@ -14,45 +14,74 @@ import search from "../../assets/img/icon_search.svg";
 import search_n from "../../assets/img/night/icon_search_n.svg";
 import phone_n from "../../assets/img/night/icon_phone_n.svg";
 import phone from "../../assets/img/Frame.svg";
+import { getAuth, signOut } from "firebase/auth";
 
-import { useLocation, NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-export const Header = () => {
-  const [isSticky, setIsSticky] = useState(false);
-  const location = useLocation();
+import { useLocation, NavLink, Link } from "react-router-dom";
 
-  useEffect(() => {
-    function handleScroll() {
-      setIsSticky(window.scrollY > 1);
-    }
+import { onAuthStateChanged } from "firebase/auth";
 
-    window.addEventListener("scroll", handleScroll);
+import {
+  getDocs,
+  collection,
+  addDoc,
+  deleteDoc,
+  updateDoc,
+  doc,
+} from "firebase/firestore";
 
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+import { db } from "../../Firebase";
 
-  useEffect(() => {
-    setIsSticky(location.pathname === "/catalog");
-  }, [location.pathname]);
+export const Header = ({ user }) => {
+  // const [isSticky, setIsSticky] = useState(false);
+  // const location = useLocation();
 
-  const [active, setActive] = useState(false);
+  const history = useNavigate();
+
+  const auth = getAuth();
+
+  const handleLogout = () => {
+    signOut(auth).then(() => {
+      history("/login");
+    });
+  };
+
+  // useEffect(() => {
+  //   function handleScroll() {
+  //     setIsSticky(window.scrollY > 1);
+  //   }
+
+  //   window.addEventListener("scroll", handleScroll);
+
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
+
+  // useEffect(() => {
+  //   setIsSticky(location.pathname === "/catalog");
+  // }, [location.pathname]);
+
+  // const [active, setActive] = useState(false);
 
   return (
     <header
-      className={
-        isSticky
-          ? `site-header site-fixed fixed-color d-flex align-items-center justify-content-between`
-          : `site-header site-fixed  d-flex align-items-center justify-content-between`
-      }
+      className={`site-header site-fixed fixed-color d-flex align-items-center justify-content-between`}
+      // className={
+      //   isSticky
+      //     ? `site-header site-fixed fixed-color d-flex align-items-center justify-content-between`
+      //     : `site-header site-fixed  d-flex align-items-center justify-content-between`
+      // }
     >
       <div className="d-flex align-items-center gap-5">
         <div className="navbar-brand">
-          <img className="logo-img" src={isSticky ? logoLight : logo} alt="/" />
+          <NavLink to="/">
+            <img className="logo-img" src={logoLight} alt="/" />
+          </NavLink>
         </div>
 
-        <NavLink className="header-catalog" to={"/catalog"}>
+        <Link className="header-catalog" to="catalog">
           Каталог
-        </NavLink>
+        </Link>
         {/* <select name="locate" id="locate">
                 <option value="Казань">Казань</option>
                 <option value="Москва">Москва</option>
@@ -75,28 +104,76 @@ export const Header = () => {
       </ul>
 
       <ul className="social-list">
-        <li>
-          <i class="fa-regular fa-heart heart-links"></i>
-          <img src={isSticky ? heard : heard_n} alt="" />
-        </li>
-        <li>
+        {/* <li>
           <a className="d-flex gap-2 align-items-center nav-links" href="#">
             <i class="fa-solid fa-magnifying-glass"></i>{" "}
-            <img src={isSticky ? search_n : search} alt="" />
+            <img src={search_n} alt="" />
             <span className="header-search-none">Поиск по названию</span>
           </a>
-        </li>
+        </li> */}
         <li>
           <a
             className="d-flex gap-2 align-items-center nav-links"
-            href="tell:+998919104910"
+            href="tell:+998978516060"
           >
             <i class="fa-sharp fa-solid fa-phone"></i>{" "}
-            <img src={isSticky ? phone_n : phone} alt="" />
-            <span className="header-phone-none">8 (843) 528-65-48</span>
+            <img src={phone_n} alt="" />
+            <span className="header-phone-none">+998 97 851 60 60</span>
           </a>
         </li>
-        <li className="toggle-bar">
+        {!user && (
+          <>
+            <li>
+              <NavLink
+                className="d-flex gap-2 align-items-center nav-links"
+                to={"/signup"}
+              >
+                <i class="fa-sharp fa-solid fa-phone"></i>{" "}
+                {/* <img src={isSticky ? phone_n : phone} alt="" /> */}
+                <span className="header-phone-none">Зарегистрироваться</span>
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className="d-flex gap-2 align-items-center nav-links"
+                to={"/login"}
+              >
+                <i class="fa-sharp fa-solid fa-phone"></i>{" "}
+                {/* <img src={isSticky ? phone_n : phone} alt="" /> */}
+                <span className="header-phone-none">Войти</span>
+              </NavLink>
+            </li>
+          </>
+        )}
+        {user && (
+          <>
+            <li>
+              <NavLink to='/cart'>   <i class="fa-regular fa-heart heart-links"></i>
+              <img src={heard} alt="" /></NavLink>
+           
+            </li>
+            <li>
+              <NavLink
+                className="d-flex gap-2 align-items-center nav-links"
+                >
+                <i class="fa-sharp fa-solid fa-phone"></i>{" "}
+                {/* <img src={isSticky ? phone_n : phone} alt="" /> */}
+                <span className="logout">{user}</span>
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className="d-flex gap-2 align-items-center nav-links"
+                to={"/"}
+              >
+                <div className="logout" onClick={handleLogout}>
+                  Выйти
+                </div>
+              </NavLink>
+            </li>
+          </>
+        )}
+        {/* <li className="toggle-bar">
           <a
             onClick={() => setActive(!active)}
             type="button"
@@ -104,9 +181,10 @@ export const Header = () => {
           >
             <span></span>
           </a>
-        </li>
+        </li> */}
       </ul>
-      <div className={`burger__nav ${active ? "active" : ""}`}>
+
+      {/* <div className={`burger__nav ${active ? "active" : ""}`}>
         <div className="geo">
           <img
             src="https://domiktut.ru/wp-content/themes/domiktut/images/svg/geo.svg"
@@ -229,7 +307,7 @@ export const Header = () => {
             </a>
           </div>
         </div>
-      </div>
+      </div> */}
     </header>
   );
 };

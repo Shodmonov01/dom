@@ -1,5 +1,6 @@
 .famous-category {
 	padding-bottom: 150px;
+	height: 1600px;
 }
 
 .famous-title {
@@ -10,6 +11,11 @@
 	font-size: 36px;
 	line-height: 150%;
 	color: #333333;
+}
+
+.catalog-row{
+	display: flex;
+	background-color: #333333;
 }
 
 .card-catalog-title {
@@ -65,13 +71,29 @@
 	font-weight: 600;
 	font-size: 16px;
 	line-height: 150%;
-	color: #f4683f;
+	color: #ffffff;
 	text-decoration: none;
+	border: none;
+	background-color: #f4683f;
+	border-radius: 10px;
+	padding: 5px 10px;
 }
 
-.card-catalog-link:hover {
-	color: #f4683f;
-}
+.card-catalog-button{
+	border: none;
+	color: #ffffff;
+	background: #f4683f;
+	padding: 20px;
+	width: 100%;
+
+	margin: auto;
+	border-radius: 0 0 20px 20px;
+	font-size: 20px;
+} 
+
+// .card-catalog-link:hover {
+// 	color: #f4683f;
+// }
 
 .card-body {
 	padding: 30px !important;
